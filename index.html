@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CRJLJ Creatine Gummies: Boost workouts with Summer Citrus, Lemon Lime & Guava flavors.">
+  <title>CRJLJ — Performance Creatine Gummies</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+  <!-- AOS animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Swiper carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- Hero -->
+  <header class="relative bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('assets/hero-bg.jpg');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-400 drop-shadow">CRJLJ Creatine Gummies</h1>
+      <p class="mt-3 text-lg md:text-xl text-gray-200">Explosive energy. Incredible flavor. No compromise.</p>
+      <a href="#products" class="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold px-5 py-3 rounded-full hover:bg-yellow-500 transition">
+        Shop Now
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 sticky top-0 z-20">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
+      <a href="#" class="text-xl font-bold text-yellow-400">CRJLJ</a>
+      <button id="menu-toggle" class="md:hidden text-gray-100 text-2xl">☰</button>
+      <ul id="menu" class="hidden md:flex space-x-6 text-gray-200">
+        <li><a href="#products" class="hover:text-yellow-400">Shop</a></li>
+        <li><a href="#stats" class="hover:text-yellow-400">Stats</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Swiper Carousel -->
+  <section class="max-w-7xl mx-auto px-4 py-10" id="products">
+    <h2 class="text-3xl font-bold text-center text-yellow-400 mb-6" data-aos="fade-up">Explore Our Flavors</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-gray-800 rounded-lg shadow-lg transform hover:-translate-y-2 transition">
+          <img src="assets/summer.png" alt="Summer Citrus" class="rounded-t-lg">
+          <div class="p-4">
+            <span class="bg-yellow-400 text-gray-900 text-xs font-semibold px-2 py-1 rounded">Bestseller</span>
+            <h3 class="mt-2 text-xl font-bold">Summer Citrus</h3>
+            <p class="text-gray-400">Explosive citrus blend to power your sessions.</p>
+          </div>
+        </div>
+        <div class="swiper-slide bg-gray-800 rounded-lg shadow-lg transform hover:-translate-y-2 transition">
+          <img src="assets/lemonlime.png" alt="Lemon Lime" class="rounded-t-lg">
+          <div class="p-4">
+            <span class="bg-green-400 text-gray-900 text-xs font-semibold px-2 py-1 rounded">New</span>
+            <h3 class="mt-2 text-xl font-bold">Lemon Lime</h3>
+            <p class="text-gray-400">Zesty lemon-lime punch to keep you moving.</p>
+          </div>
+        </div>
+        <div class="swiper-slide bg-gray-800 rounded-lg shadow-lg transform hover:-translate-y-2 transition">
+          <img src="assets/guava.png" alt="Guava" class="rounded-t-lg">
+          <div class="p-4">
+            <h3 class="mt-2 text-xl font-bold">Guava</h3>
+            <p class="text-gray-400">Tropical guava twist with 2.5g creatine per gummy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="max-w-7xl mx-auto px-4 py-10 text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-6">Trusted by Athletes</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="text-4xl font-bold text-yellow-400 counter" data-target="10000">0</h3>
+        <p class="text-gray-300">Gummies Sold</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-yellow-400 counter" data-target="5000">0</h3>
+        <p class="text-gray-300">Happy Customers</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-yellow-400 counter" data-target="150">0</h3>
+        <p class="text-gray-300">Stores Stocked</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Products -->
+  <main id="about" class="max-w-6xl mx-auto px-4 space-y-10">
+    <section class="bg-gray-800 rounded-lg shadow-lg overflow-hidden md:flex" data-aos="fade-right">
+      <img src="assets/summer.png" class="w-full md:w-1/2 object-cover" alt="Summer Citrus Gummy">
+      <div class="p-6 md:w-1/2">
+        <h2 class="text-2xl font-bold text-yellow-400">Orange Crush</h2>
+        <p class="mt-3 text-gray-300">A citrus-packed creatine gummy. All-natural ingredients and 2.5g of creatine in every piece.</p>
+        <button onclick="openModal('Orange Crush')" class="mt-4 bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-500 transition">Buy</button>
+      </div>
+    </section>
+
+    <section class="bg-gray-800 rounded-lg shadow-lg overflow-hidden md:flex md:flex-row-reverse" data-aos="fade-left">
+      <img src="assets/lemonlime.png" class="w-full md:w-1/2 object-cover" alt="Lemon Lime Gummy">
+      <div class="p-6 md:w-1/2">
+        <h2 class="text-2xl font-bold text-green-400">Lemon Lime</h2>
+        <p class="mt-3 text-gray-300">Zesty lemon-lime flavor with 2.5g creatine per gummy.</p>
+        <button onclick="openModal('Lemon Lime')" class="mt-4 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-green-500 transition">Buy</button>
+      </div>
+    </section>
+
+    <section class="bg-gray-800 rounded-lg shadow-lg overflow-hidden md:flex" data-aos="fade-right">
+      <img src="assets/guava.png" class="w-full md:w-1/2 object-cover" alt="Guava Gummy">
+      <div class="p-6 md:w-1/2">
+        <h2 class="text-2xl font-bold text-pink-400">Guava</h2>
+        <p class="mt-3 text-gray-300">Tropical guava taste, 2.5g creatine, and natural sweetness for your daily boost.</p>
+        <button onclick="openModal('Guava')" class="mt-4 bg-pink-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-pink-500 transition">Buy</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="buyModal" class="fixed inset-0 bg-black/70 flex items-center justify-center hidden">
+    <div class="bg-white text-gray-900 p-6 rounded-lg max-w-sm w-full">
+      <h3 id="modalTitle" class="text-xl font-bold mb-4">Buy Product</h3>
+      <p>Thank you for choosing CRJLJ gummies!</p>
+      <button onclick="closeModal()" class="mt-4 bg-yellow-400 px-4 py-2 rounded hover:bg-yellow-500">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center text-gray-400 py-6 mt-10">
+    <p class="mb-4">Follow CRJLJ on Social Media:</p>
+    <div class="flex justify-center space-x-6">
+      <a href="https://www.instagram.com/khristonrobinson/" target="_blank" class="hover:text-yellow-400">
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+      <a href="https://www.facebook.com/khriston.robinson" target="_blank" class="hover:text-yellow-400">
+        <i class="fab fa-facebook text-2xl"></i>
+      </a>
+      <a href="https://twitter.com/khristonrobinson" target="_blank" class="hover:text-yellow-400">
+        <i class="fab fa-twitter text-2xl"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // AOS init
+    AOS.init();
+
+    // Swiper init
+    new Swiper('.swiper', {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      centeredSlides: true,
+      autoplay: { delay: 3000 },
+      breakpoints: {
+        768: { slidesPerView: 3 }
+      }
+    });
+
+    // Mobile nav toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Modal
+    function openModal(product) {
+      document.getElementById('modalTitle').innerText = `Buy ${product}`;
+      document.getElementById('buyModal').classList.remove('hidden');
+    }
+    function closeModal() {
+      document.getElementById('buyModal').classList.add('hidden');
+    }
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    counters.forEach(counter => {
+      const update = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+        if (count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(update, 10);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">  
