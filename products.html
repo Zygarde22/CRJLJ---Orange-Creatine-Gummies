@@ -6,36 +6,90 @@
   <title>Products - CRJLJ</title>
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
-
-  <header class="bg-gray-800 p-4 text-center">
-    <h1 class="text-3xl font-bold text-yellow-400">What We Offer</h1>
+<!-- Navigation -->
+  <nav class="bg-gray-800 sticky top-0 z-20">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
+      <div class="flex items-center space-x-2">
+        <img src="assets/logo.png" alt="CRJLJ Logo" class="h-8 w-auto">
+        <a href="#" class="text-xl font-bold text-yellow-400">CRJLJ</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-gray-100 text-2xl">☰</button>
+      <ul id="menu" class="hidden md:flex space-x-6 text-gray-200">
+        <li><a href="#products" class="hover:text-yellow-400">Shop</a></li>
+        <li><a href="#stats" class="hover:text-yellow-400">Stats</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="bg-gray-800 p-6 text-center">
+    <h1 class="text-4xl font-extrabold text-yellow-400 drop-shadow">What We Offer</h1>
   </header>
-    <main class="flex-1 max-w-7xl mx-auto p-6 space-y-6">
-        <section>
-        <h2 class="text-2xl font-semibold text-yellow-400">Our Products</h2>
-        <p class="mt-2">At CRJLJ, we specialize in high-quality creatine gummies designed to enhance your workout performance. Our products are made with all-natural ingredients and come in delicious flavors.</p>
-        </section>
-    
-        <section>
-        <h3 class="text-xl font-semibold text-yellow-400 mt-4">Available Flavors</h3>
-        <ul class="list-disc list-inside mt-2 text-gray-300">
-            <li>Summer Citrus</li>
-            <li>Lemon Lime</li>
-            <li>Guava</li>
-        </ul>
-        </section>
-    
-        <section>
-        <h3 class="text-xl font-semibold text-yellow-400 mt-4">Why Choose Our Gummies?</h3>
-        <p class="mt-2">Our gummies are not only effective but also taste great. They are perfect for athletes and anyone looking to boost their energy levels before a workout.</p>
-        </section>
-   
 
-  <footer class="bg-gray-800 text-center text-gray-400 py-4">
+  <main class="flex-1 max-w-6xl mx-auto p-6 space-y-12">
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-yellow-400">Our Products</h2>
+      <p class="mt-3 text-gray-300 leading-relaxed">At CRJLJ, we specialize in premium creatine gummies crafted to boost your workout performance. Our products are made with all-natural ingredients and come in bold, delicious flavors you'll love.</p>
+    </section>
+
+    <section class="fade-in">
+      <h3 class="text-2xl font-semibold text-yellow-400 mt-4">Available Flavors</h3>
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+          <span class="inline-block bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded mb-2">Summer Citrus</span>
+          <p class="text-gray-300">Bright, refreshing, and perfect for summer workouts.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+          <span class="inline-block bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded mb-2">Lemon Lime</span>
+          <p class="text-gray-300">Classic tangy taste to energize every training session.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+          <span class="inline-block bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded mb-2">Guava</span>
+          <p class="text-gray-300">Exotic, sweet, and smooth flavor you'll crave daily.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <h3 class="text-2xl font-semibold text-yellow-400 mt-4">Why Choose Our Gummies?</h3>
+      <p class="mt-3 text-gray-300 leading-relaxed">Our gummies aren't just effective — they're enjoyable. Each serving helps fuel your workout, making your supplement routine something you look forward to instead of something you have to do.</p>
+    </section>
+
+    <section class="fade-in text-center">
+      <a href="#" class="inline-block mt-6 bg-yellow-400 text-gray-900 font-bold px-6 py-3 rounded-full shadow hover:bg-yellow-300 transition">Shop Now</a>
+    </section>
+
+  </main>
+
+  <footer class="bg-gray-800 text-center text-gray-400 py-4 mt-auto">
     &copy; 2025 CRJLJ. All rights reserved.
   </footer>
+
+  <script>
+    // Fade-in on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
