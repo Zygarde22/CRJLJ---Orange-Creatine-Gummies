@@ -24,8 +24,10 @@
   <nav class="bg-gray-800 sticky top-0 z-20">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
       <div class="flex items-center space-x-2">
-        <img src="assets/logo.png" alt="CRJLJ Logo" class="h-8 w-auto">
-        <a href="#" class="text-xl font-bold text-yellow-400">CRJLJ</a>
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="assets/logo.png" alt="CRJLJ Logo" class="h-8 w-auto">
+          <span class="text-xl font-bold text-yellow-400">CRJLJ</span>
+        </a>
       </div>
       <button id="menu-toggle" class="md:hidden text-gray-100 text-2xl">☰</button>
       <ul id="menu" class="hidden md:flex space-x-6 text-gray-200">
@@ -35,6 +37,7 @@
       </ul>
     </div>
   </nav>
+
   <header class="bg-gray-800 p-6 text-center">
     <h1 class="text-4xl font-extrabold text-yellow-400 drop-shadow">What We Offer</h1>
   </header>
@@ -70,7 +73,6 @@
           <img src="assets/orange.png" alt="Orange Flavor" class="mt-2 w-full h-32 object-cover rounded-lg">
         </div>
       </div>
-
     </section>
 
     <section class="fade-in">
@@ -81,43 +83,43 @@
     <section class="fade-in text-center">
       <a href="#" class="inline-block mt-6 bg-yellow-400 text-gray-900 font-bold px-6 py-3 rounded-full shadow hover:bg-yellow-300 transition">Shop Now</a>
     </section>
-    <!-- Additional section for customer reviews -->
-<section class="fade-in">
-  <h2 class="text-3xl font-semibold text-yellow-400 mt-12">Customer Reviews</h2>
-  <div class="mt-6 space-y-4">
-    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-      <div class="flex items-center mb-2">
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
+
+    <!-- Customer Reviews -->
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-yellow-400 mt-12">Customer Reviews</h2>
+      <div class="mt-6 space-y-4">
+        <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+          <div class="flex items-center mb-2">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-300">"These gummies are a game changer! I love the taste and they really help with my energy levels during workouts." - Alex</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+          <div class="flex items-center mb-2">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star-half-alt text-yellow-400"></i>
+          </div>
+          <p class="text-gray-300">"Finally, a creatine supplement that doesn't taste like chalk! The Summer Citrus flavor is my favorite." - Jamie</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+          <div class="flex items-center mb-2">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="far fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-300">"I was skeptical at first, but these gummies are amazing. They give me the boost I need without any weird aftertaste." - Taylor</p>
+        </div>
       </div>
-      <p class="text-gray-300">"These gummies are a game changer! I love the taste and they really help with my energy levels during workouts." - Alex</p>
-    </div>
-    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-      <div class="flex items-center mb-2">
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star-half-alt text-yellow-400"></i>
-      </div>
-      <p class="text-gray-300">"Finally, a creatine supplement that doesn't taste like chalk! The Summer Citrus flavor is my favorite." - Jamie</p>
-    </div>
-    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-      <div class="flex items-center mb-2">
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="far fa-star text-yellow-400"></i>
-      </div>
-      <p class="text-gray-300">"I was skeptical at first, but these gummies are amazing. They give me the boost I need without any weird aftertaste." - Taylor</p>
-    </div>
-  </div>
-</section>
-  </section>
+    </section>
   </main>
 
   <footer class="bg-gray-800 text-center text-gray-400 py-4 mt-auto">
@@ -133,7 +135,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(section => observer.observe(section));
   </script>
 
