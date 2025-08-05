@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About CRJLJ</title>
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
     .parallax {
       background-attachment: fixed;
       background-size: cover;
@@ -15,7 +19,8 @@
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
     }
     .fade-in.visible {
       opacity: 1;
@@ -24,9 +29,10 @@
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
   <!-- Navigation -->
   <nav class="bg-gray-800 sticky top-0 z-20">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4 relative">
       <div class="flex items-center space-x-2">
         <img src="assets/logo.png" alt="CRJLJ Logo" class="h-8 w-auto">
         <a href="#" class="text-xl font-bold text-yellow-400">CRJLJ</a>
@@ -40,15 +46,27 @@
     </div>
   </nav>
 
-  <header class="relative parallax h-60 flex items-center justify-center" style="background-image: url('assets/hero-bg.jpg');">
-    <div class="bg-black/50 w-full h-full absolute top-0 left-0"></div>
-    <h1 class="relative text-4xl md:text-5xl font-extrabold text-yellow-400 drop-shadow-lg">About CRJLJ</h1>
+  <!-- Hero Section -->
+  <header class="relative parallax h-96 flex items-center justify-center" style="background-image: url('assets/hero-bg.jpg');">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-gray-900/50"></div>
+    <div class="relative text-center z-10">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-400 drop-shadow-lg">About CRJLJ</h1>
+      <a href="#products" class="inline-block mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-full hover:bg-yellow-300 transition">Shop Now</a>
+    </div>
   </header>
+
+  <!-- Intro Section -->
+  <section class="py-12 bg-gray-800 fade-in">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold text-yellow-400">Athlete Tested and Approved</h2>
+      <p class="mt-4 text-gray-300">We are dedicated to providing the best fitness supplements to help you reach your goals.</p>
+    </div>
+  </section>
 
   <main class="flex-1 max-w-4xl mx-auto p-6 space-y-10">
 
     <section class="fade-in">
-      <p class="text-lg leading-relaxed">CRJLJ is a brand new fitness supplement brand that aims to provide high-quality products to help you achieve your fitness goals.</p>
+      <p class="text-lg leading-relaxed text-gray-300">CRJLJ is a brand new fitness supplement brand that aims to provide high-quality products to help you achieve your fitness goals.</p>
     </section>
 
     <section class="fade-in">
@@ -65,8 +83,10 @@
       </ul>
     </section>
 
+    <hr class="border-t border-gray-700 my-10">
+
     <section class="fade-in">
-      <h2 class="text-3xl font-semibold text-yellow-400 mt-4">Who are our founders?</h2>
+      <h2 class="text-3xl font-semibold text-yellow-400 mt-4">Who Are Our Founders?</h2>
       <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
           <h3 class="text-xl font-bold text-yellow-400">Tarik Ayeed</h3>
@@ -74,45 +94,58 @@
         </div>
         <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
           <h3 class="text-xl font-bold text-yellow-400">Khris Robinson</h3>
-          <p class="mt-2 text-gray-300">A strongman athlete, and a dedicated fitness nut, with an eye for supplements.</p>
+          <p class="mt-2 text-gray-300">A strongman athlete and a dedicated fitness nut, with an eye for supplements.</p>
         </div>
       </div>
     </section>
-<section class="fade-in">
-  <h2 class="text-3xl font-semibold text-yellow-400 mt-4">Our Nutritionists</h2>
-  <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-      <h3 class="text-xl font-bold text-yellow-400">Alex Carter</h3>
-      <p class="mt-2 text-gray-300">A certified nutritionist passionate about taste and function in supplements.</p>
-    </div>
-    <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-      <h3 class="text-xl font-bold text-yellow-400">Jamie Lee</h3>
-      <p class="mt-2 text-gray-300">An experienced athlete who believes supplements should fuel both body and mind.</p>
-    </div>
-  </div>
-</section>
-<section class="fade-in">
-  <h2 class="text-3xl font-semibold text-yellow-400 mt-4">Our subsidiaries</h2>
-  <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-      <h3 class="text-xl font-bold text-yellow-400">CRJLJ Labs</h3>
-      <p class="mt-2 text-gray-300">Our research and development wing, focused on innovative supplement solutions.</p>
-    </div>
-    <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-      <h3 class="text-xl font-bold text-yellow-400">CRJLJ Fitness</h3>
-      <p class="mt-2 text-gray-300">A community platform for fitness enthusiasts to connect and share their journeys.</p>
-    </div>
-  </div>
-</section>
-</main>
 
+    <hr class="border-t border-gray-700 my-10">
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-yellow-400 mt-4">Our Nutritionists</h2>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-yellow-400">Alex Carter</h3>
+          <p class="mt-2 text-gray-300">A certified nutritionist passionate about taste and function in supplements.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-yellow-400">Jamie Lee</h3>
+          <p class="mt-2 text-gray-300">An experienced athlete who believes supplements should fuel both body and mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-t border-gray-700 my-10">
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-yellow-400 mt-4">Our Subsidiaries</h2>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-yellow-400">CRJLJ Labs</h3>
+          <p class="mt-2 text-gray-300">Our research and development wing, focused on innovative supplement solutions.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-yellow-400">CRJLJ Fitness</h3>
+          <p class="mt-2 text-gray-300">A community platform for fitness enthusiasts to connect and share their journeys.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-t border-gray-700 my-10">
+
+    <section class="fade-in text-center py-12 bg-gray-800 rounded-xl shadow-inner">
+      <h2 class="text-3xl font-semibold text-yellow-400 mb-4">What People Are Saying</h2>
+      <p class="italic text-gray-300 max-w-2xl mx-auto">“CRJLJ's gummies actually make me look forward to pre-workout. Game changer!” – Happy Customer</p>
+    </section>
+
+  </main>
 
   <footer class="bg-gray-800 text-center text-gray-400 py-4 mt-auto">
     &copy; 2025 CRJLJ. All rights reserved.
   </footer>
 
   <script>
-    // Fade in sections on scroll
+    // Fade-in animations on scroll
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
@@ -123,6 +156,16 @@
 
     document.querySelectorAll('.fade-in').forEach(section => {
       observer.observe(section);
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+      menu.classList.add('flex-col', 'bg-gray-800', 'p-4', 'absolute', 'right-4', 'top-16', 'rounded-lg', 'shadow-lg');
     });
   </script>
 </body>
